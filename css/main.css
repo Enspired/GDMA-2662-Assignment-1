@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+    TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Hero
+        - Nav
+        - Element Box
+        - Dimensions
+        - Warning 
+        - Background Images 
+        - Alt Text 
+        - Footer 
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Screen Reader	   
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+    3.0 - GENERIC
+-------------------------------------------------------------- */
+
+/* ----- UNIVERSAL ----- */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    color: #3A3939;
+    font-size: 16px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENTS
+-------------------------------------------------------------- */
+body > header, 
+nav a  {
+    color: #DDA901;
+}
+
+h2, 
+main [class*="fa-"] {
+    font-size: 24px;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+h1 {
+    font-size: 100px;
+    font-weight: 800;
+    margin: 150px 0 0;
+}
+
+h1 + p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h2 span {
+    margin-right: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+}
+
+p {
+    line-height: 29px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+    5.0 - OBJECTS
+-------------------------------------------------------------- */
+
+/* ----- FRAMEWORK ----- */
+.wrapper {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+
+
+/*--------------------------------------------------------------
+    6.0 - COMPONENTS
+-------------------------------------------------------------- */
+#element-box, 
+#dimensions,
+#background-images,
+#alt-text {
+    padding: 100px 0;
+}
+
+#element-box .wrapper div, 
+#dimensions .wrapper div,
+#background-images .wrapper div,
+#alt-text section:last-child {
+    width: 640px;
+}
+
+#element-box, 
+#background-images, 
+footer,
+footer a {
+    color: #fff;
+}
+
+#element-box, 
+#background-images,
+#alt-text section:first-child {
+    text-align: center;
+}
+
+#element-box .wrapper div,
+#background-images .wrapper div,
+#alt-text section:first-child {
+    margin: 0 auto;
+}
+
+#element-box .wrapper div,
+#background-images .wrapper div  {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px 50px;
+}
+
+
+/* ----- HERO ----- */
+body > header {
+    background: url("../img/bg-hero.jpg") no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    padding: 30px 0;
+    color: #DDA901;
+}
+
+
+/* ----- NAV ----- */
+nav  {
+    text-align: center;
+    margin-top: 160px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ----- ELEMENT BOX ----- */
+#element-box {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eeb802+0,e4af00+35,d7a300+70,cb9801+100 */
+    background: #eeb802; /* Old browsers */
+    background: url("../img/bg-pencil.jpg") no-repeat, -moz-linear-gradient(top,  #eeb802 0%, #e4af00 35%, #d7a300 70%, #cb9801 100%); /* FF3.6-15 */
+    background: url("../img/bg-pencil.jpg") no-repeat, -webkit-linear-gradient(top,  #eeb802 0%,#e4af00 35%,#d7a300 70%,#cb9801 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("../img/bg-pencil.jpg") no-repeat, linear-gradient(to bottom,  #eeb802 0%,#e4af00 35%,#d7a300 70%,#cb9801 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeb802', endColorstr='#cb9801',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* ----- DIMENSIONS ----- */
+#dimensions {
+    background: #cfd7e0; /* Old browsers */
+    background: url("../img/bg-phone.jpg") no-repeat bottom right, -moz-linear-gradient(top,  #cfd7e0 0%, #ced7e0 50%, #c7d0d9 100%); /* FF3.6-15 */
+    background: url("../img/bg-phone.jpg") no-repeat bottom right, -webkit-linear-gradient(top,  #cfd7e0 0%,#ced7e0 50%,#c7d0d9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("../img/bg-phone.jpg") no-repeat bottom right, linear-gradient(to bottom,  #cfd7e0 0%,#ced7e0 50%,#c7d0d9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd7e0', endColorstr='#c7d0d9',GradientType=0 ); /* IE6-9 */
+}
+
+#element-box, 
+#dimensions {
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    -ms-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+
+/* ----- WARNING ----- */
+#warning {
+    text-align: center;
+    padding: 25px 0;
+}
+
+#warning img, 
+#warning p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#warning p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* ----- BACKGROUND IMAGE ----- */
+#background-images {
+    background: #eeb802; /* Old browsers */
+    background: -moz-linear-gradient(top,  #eeb802 0%, #e4af00 35%, #d7a300 70%, #cb9801 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #eeb802 0%,#e4af00 35%,#d7a300 70%,#cb9801 100%); /* Chrome10-25,Safari5.1-6 */
+    background:linear-gradient(to bottom,  #eeb802 0%,#e4af00 35%,#d7a300 70%,#cb9801 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeb802', endColorstr='#cb9801',GradientType=0 ); /* IE6-9 */
+}
+
+#background-images .wrapper div {
+    padding-top: 30px;
+}
+
+
+/* ----- ALT TEXT ----- */
+#alt-text {
+    background: #cfd7e0; /* Old browsers */
+    background: url("../img/bg-dots.png") no-repeat bottom right, -moz-linear-gradient(top,  #cfd7e0 0%, #ced7e0 50%, #c7d0d9 100%); /* FF3.6-15 */
+    background: url("../img/bg-dots.png") no-repeat bottom right, -webkit-linear-gradient(top,  #cfd7e0 0%,#ced7e0 50%,#c7d0d9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("../img/bg-dots.png") no-repeat bottom right, linear-gradient(to bottom,  #cfd7e0 0%,#ced7e0 50%,#c7d0d9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd7e0', endColorstr='#c7d0d9',GradientType=0 ); /* IE6-9 */
+}
+
+#alt-text section:first-child {
+    width: 800px;
+    margin-bottom: 100px;
+}
+
+#alt-text section section p {
+    margin: 0 0 35px;
+}
+
+
+/* ----- FOOTER ----- */
+footer {
+    background-color: #3A3939;
+    padding: 35px 0;
+}
+
+footer .wrapper  {
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    -ms-column-count:2;
+    -o-column-count:2;
+    column-count:2;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+    7.0 - UTILITY
+-------------------------------------------------------------- */
+
+/* ----- SCREEN READER ----- */
+.sr-only {
+        position: absolute;
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0,0,0,0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+  }

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="https://kit.fontawesome.com/f054c82b4b.js" crossorigin="anonymous"></script>
+
+<title>Artlantis</title>
+</head>
+
+<body>
+    <header> 
+        <div class="wrapper">
+            <img src="img/logo-artlantis.png" alt="Artlantis" width="200">
+            <h1>The Box Model</h1>
+            <p>Browsers see every element contained in a rectangular box. </p>
+            <nav>
+                <ul>
+                    <li><a href="#element-box">Element Box</a></li>
+                    <li><a href="#dimensions">Dimensions</a></li>
+                    <li><a href="#background-images">Background Images</a></li>
+                    <li><a href="#alt-text">Alt Text</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="element-box">
+            <div class="wrapper">
+                <div>
+                    <header>
+                        <h2>The Element Box</h2>
+                    </header>
+                    <p>Every element in a document, both block-level and inline, generates a rectangular element box. The core, <b>content area</b>, of the element box is the content itself. The <b>padding</b> is the area held between the content area and an optional border. The <b>border</b> is a line that surrounds the element and its padding. The <b>margin</b> is an optional amount of space added on the outside of the border.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="dimensions">
+            <div class="wrapper">
+                <div>
+                    <header>
+                        <h2>Specifying Box Dimensions</h2>
+                    </header>
+                    <p>The <b>default</b> method applies the width and height to the content box. The resulting size of the element will be the dimensions specified <em>plus</em> the amount of padding and borders. The <b>border-box</b> method applies the width and height values to the border box, which <em>includes</em> the content, padding, and border. The resulting visible element box, including padding and borders, will be exactly the dimensions you specify.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper" id="warning">
+            <img src="img/icon-warning.jpg" alt="warning" width="50">
+            <p>Never apply a height</p>
+            <img src="img/icon-warning.jpg" alt="" width="50">  
+        </div>
+
+        <section id="background-images">
+            <div class="wrapper">
+                <div>
+                    <header>
+                        <span class="fa-regular fa-image"></span>
+                        <h2>Images Move to the Background</h2>
+                    </header>
+                    <p>Images that are used <i>purely</i> for decoration should be controlled with a style sheet rather than the markup. The benefit to specifying decorative images only in an external style sheet make the document cleaner and more accessible.</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="alt-text">
+            <div class="wrapper">
+                <section>
+                    <header>
+                        <h2><span class="fa-solid fa-align-left"></span> Alternative Text</h2>
+                    </header>
+                    <p>Every <b>img</b> element must also contain an <b>alt</b> attribute that is used to provide a brief description of the image for those who are not able to see it. Alternate text (alt text) should serve as a substitute for the image content&mdash;serving the same purpose and presenting the same information.</p>
+                    <p>If an image does not add anything meaningful to the text content of the page, leave the value of the alt attribute empty, <b>null</b>. There should be no character space between the quotation marks.</p>
+                </section>
+                <section>
+                    <header>
+                        <h2>Other Visuals</h2>
+                    </header>
+                    <section>
+                        <header>
+                            <h3>iframe element</h3>
+                        </header>
+                        <p>The inline frame lets you embed a separate HTML document or resource in a document. An iframe allows the owner of the content to control visual aspects of the content you are putting on your page. </p>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>video &amp; audio elements</h3>
+                        </header>
+                        <p>Different browsers support different video and audio formats. Ensuring your media is viewable across every combination of browsers, platforms, and devices you wish to reach, can be a complicated task.</p>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>canvas element</h3>
+                        </header>
+                        <p>The canvas element creates an area on the web page for drawing with a set of JavaScript functions for creating lines, shapes, fills, text, animations, and so on. The illustrations are generated with scripting, it's dynamic, can draw things on the fly, and can respond to user input. </p>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="wrapper">
+            <section>
+                <h4>Learning Web Design</h4>
+                <p>Copyright &#169; 2018 Jennifer Niederst Robbins</p>
+            </section>
+            <section>
+                <h4>Social Media</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"> 
+                            <span class="fa-brands fa-facebook-f"></span> 
+                            <span class="sr-only">Facebook</span> 
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <span class="fa-brands fa-instagram"></span>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/?lang=en" target="_blank">
+                            <span class="fa-brands fa-twitter"></span>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <span class="fa-brands fa-linkedin-in"></span>
+                            <span class="sr-only">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+
+</body>
+</html>
